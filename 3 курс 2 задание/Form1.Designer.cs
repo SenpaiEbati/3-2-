@@ -48,10 +48,9 @@
             this.EqualsOperatorOne_TB = new System.Windows.Forms.TextBox();
             this.EqualsOperatorOne_L = new System.Windows.Forms.Label();
             this.ResultingOperator_GB = new System.Windows.Forms.GroupBox();
+            this.ResultingOperatorTwo_NUD = new System.Windows.Forms.NumericUpDown();
             this.ResultingOperatorTwo_L = new System.Windows.Forms.Label();
             this.ResultingOperator_B = new System.Windows.Forms.Button();
-            this.ResultingOperatorOne_TB = new System.Windows.Forms.TextBox();
-            this.ResultingOperatorOne_L = new System.Windows.Forms.Label();
             this.LessOperator_GB = new System.Windows.Forms.GroupBox();
             this.LessOperatorTwo_TB = new System.Windows.Forms.TextBox();
             this.LessOperatorTwo_L = new System.Windows.Forms.Label();
@@ -60,13 +59,12 @@
             this.LessOperatorOne_L = new System.Windows.Forms.Label();
             this.Result_TB = new System.Windows.Forms.TextBox();
             this.Result_L = new System.Windows.Forms.Label();
-            this.ResultingOperatorTwo_NUD = new System.Windows.Forms.NumericUpDown();
             this.Del_B = new System.Windows.Forms.Button();
             this.SubtracOperator_GB.SuspendLayout();
             this.EqualsOperator_GB.SuspendLayout();
             this.ResultingOperator_GB.SuspendLayout();
-            this.LessOperator_GB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ResultingOperatorTwo_NUD)).BeginInit();
+            this.LessOperator_GB.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListBox_LB
@@ -74,7 +72,7 @@
             this.ListBox_LB.FormattingEnabled = true;
             this.ListBox_LB.Location = new System.Drawing.Point(12, 25);
             this.ListBox_LB.Name = "ListBox_LB";
-            this.ListBox_LB.Size = new System.Drawing.Size(222, 381);
+            this.ListBox_LB.Size = new System.Drawing.Size(222, 355);
             this.ListBox_LB.TabIndex = 0;
             // 
             // ListBox_L
@@ -156,6 +154,7 @@
             this.SubtracOperator_B.TabIndex = 8;
             this.SubtracOperator_B.Text = "&Выполнить";
             this.SubtracOperator_B.UseVisualStyleBackColor = true;
+            this.SubtracOperator_B.Click += new System.EventHandler(this.SubtracOperator_B_Click);
             // 
             // SubtracOperatorOne_TB
             // 
@@ -181,6 +180,7 @@
             this.AddField_B.TabIndex = 7;
             this.AddField_B.Text = "&Добавить";
             this.AddField_B.UseVisualStyleBackColor = true;
+            this.AddField_B.Click += new System.EventHandler(this.AddField_B_Click);
             // 
             // EqualsOperator_GB
             // 
@@ -189,7 +189,7 @@
             this.EqualsOperator_GB.Controls.Add(this.EqualsOperator_B);
             this.EqualsOperator_GB.Controls.Add(this.EqualsOperatorOne_TB);
             this.EqualsOperator_GB.Controls.Add(this.EqualsOperatorOne_L);
-            this.EqualsOperator_GB.Location = new System.Drawing.Point(240, 267);
+            this.EqualsOperator_GB.Location = new System.Drawing.Point(240, 241);
             this.EqualsOperator_GB.Name = "EqualsOperator_GB";
             this.EqualsOperator_GB.Size = new System.Drawing.Size(302, 84);
             this.EqualsOperator_GB.TabIndex = 11;
@@ -220,6 +220,7 @@
             this.EqualsOperator_B.TabIndex = 8;
             this.EqualsOperator_B.Text = "Вы&полнить";
             this.EqualsOperator_B.UseVisualStyleBackColor = true;
+            this.EqualsOperator_B.Click += new System.EventHandler(this.EqualsOperator_B_Click);
             // 
             // EqualsOperatorOne_TB
             // 
@@ -242,19 +243,29 @@
             this.ResultingOperator_GB.Controls.Add(this.ResultingOperatorTwo_NUD);
             this.ResultingOperator_GB.Controls.Add(this.ResultingOperatorTwo_L);
             this.ResultingOperator_GB.Controls.Add(this.ResultingOperator_B);
-            this.ResultingOperator_GB.Controls.Add(this.ResultingOperatorOne_TB);
-            this.ResultingOperator_GB.Controls.Add(this.ResultingOperatorOne_L);
             this.ResultingOperator_GB.Location = new System.Drawing.Point(240, 177);
             this.ResultingOperator_GB.Name = "ResultingOperator_GB";
-            this.ResultingOperator_GB.Size = new System.Drawing.Size(302, 84);
+            this.ResultingOperator_GB.Size = new System.Drawing.Size(302, 58);
             this.ResultingOperator_GB.TabIndex = 11;
             this.ResultingOperator_GB.TabStop = false;
             this.ResultingOperator_GB.Text = "Оператор * (<T>, int)";
             // 
+            // ResultingOperatorTwo_NUD
+            // 
+            this.ResultingOperatorTwo_NUD.Location = new System.Drawing.Point(112, 24);
+            this.ResultingOperatorTwo_NUD.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.ResultingOperatorTwo_NUD.Name = "ResultingOperatorTwo_NUD";
+            this.ResultingOperatorTwo_NUD.Size = new System.Drawing.Size(100, 20);
+            this.ResultingOperatorTwo_NUD.TabIndex = 11;
+            // 
             // ResultingOperatorTwo_L
             // 
             this.ResultingOperatorTwo_L.AutoSize = true;
-            this.ResultingOperatorTwo_L.Location = new System.Drawing.Point(10, 52);
+            this.ResultingOperatorTwo_L.Location = new System.Drawing.Point(10, 26);
             this.ResultingOperatorTwo_L.Name = "ResultingOperatorTwo_L";
             this.ResultingOperatorTwo_L.Size = new System.Drawing.Size(91, 13);
             this.ResultingOperatorTwo_L.TabIndex = 10;
@@ -268,22 +279,7 @@
             this.ResultingOperator_B.TabIndex = 8;
             this.ResultingOperator_B.Text = "В&ыполнить";
             this.ResultingOperator_B.UseVisualStyleBackColor = true;
-            // 
-            // ResultingOperatorOne_TB
-            // 
-            this.ResultingOperatorOne_TB.Location = new System.Drawing.Point(112, 23);
-            this.ResultingOperatorOne_TB.Name = "ResultingOperatorOne_TB";
-            this.ResultingOperatorOne_TB.Size = new System.Drawing.Size(100, 20);
-            this.ResultingOperatorOne_TB.TabIndex = 8;
-            // 
-            // ResultingOperatorOne_L
-            // 
-            this.ResultingOperatorOne_L.AutoSize = true;
-            this.ResultingOperatorOne_L.Location = new System.Drawing.Point(10, 26);
-            this.ResultingOperatorOne_L.Name = "ResultingOperatorOne_L";
-            this.ResultingOperatorOne_L.Size = new System.Drawing.Size(83, 13);
-            this.ResultingOperatorOne_L.TabIndex = 8;
-            this.ResultingOperatorOne_L.Text = "&Исходное поле";
+            this.ResultingOperator_B.Click += new System.EventHandler(this.ResultingOperator_B_Click);
             // 
             // LessOperator_GB
             // 
@@ -292,7 +288,7 @@
             this.LessOperator_GB.Controls.Add(this.LessOperator_B);
             this.LessOperator_GB.Controls.Add(this.LessOperatorOne_TB);
             this.LessOperator_GB.Controls.Add(this.LessOperatorOne_L);
-            this.LessOperator_GB.Location = new System.Drawing.Point(240, 357);
+            this.LessOperator_GB.Location = new System.Drawing.Point(240, 331);
             this.LessOperator_GB.Name = "LessOperator_GB";
             this.LessOperator_GB.Size = new System.Drawing.Size(302, 84);
             this.LessOperator_GB.TabIndex = 12;
@@ -323,6 +319,7 @@
             this.LessOperator_B.TabIndex = 8;
             this.LessOperator_B.Text = "Выпо&лнить";
             this.LessOperator_B.UseVisualStyleBackColor = true;
+            this.LessOperator_B.Click += new System.EventHandler(this.LessOperator_B_Click);
             // 
             // LessOperatorOne_TB
             // 
@@ -342,7 +339,7 @@
             // 
             // Result_TB
             // 
-            this.Result_TB.Location = new System.Drawing.Point(12, 485);
+            this.Result_TB.Location = new System.Drawing.Point(12, 454);
             this.Result_TB.Name = "Result_TB";
             this.Result_TB.ReadOnly = true;
             this.Result_TB.Size = new System.Drawing.Size(530, 20);
@@ -351,33 +348,27 @@
             // Result_L
             // 
             this.Result_L.AutoSize = true;
-            this.Result_L.Location = new System.Drawing.Point(12, 469);
+            this.Result_L.Location = new System.Drawing.Point(12, 438);
             this.Result_L.Name = "Result_L";
             this.Result_L.Size = new System.Drawing.Size(59, 13);
             this.Result_L.TabIndex = 14;
             this.Result_L.Text = "&Результат";
             // 
-            // ResultingOperatorTwo_NUD
-            // 
-            this.ResultingOperatorTwo_NUD.Location = new System.Drawing.Point(112, 50);
-            this.ResultingOperatorTwo_NUD.Name = "ResultingOperatorTwo_NUD";
-            this.ResultingOperatorTwo_NUD.Size = new System.Drawing.Size(100, 20);
-            this.ResultingOperatorTwo_NUD.TabIndex = 11;
-            // 
             // Del_B
             // 
-            this.Del_B.Location = new System.Drawing.Point(12, 418);
+            this.Del_B.Location = new System.Drawing.Point(12, 392);
             this.Del_B.Name = "Del_B";
             this.Del_B.Size = new System.Drawing.Size(222, 23);
             this.Del_B.TabIndex = 15;
             this.Del_B.Text = "&Удалить";
             this.Del_B.UseVisualStyleBackColor = true;
+            this.Del_B.Click += new System.EventHandler(this.Del_B_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 517);
+            this.ClientSize = new System.Drawing.Size(553, 489);
             this.Controls.Add(this.Del_B);
             this.Controls.Add(this.Result_L);
             this.Controls.Add(this.Result_TB);
@@ -400,9 +391,9 @@
             this.EqualsOperator_GB.PerformLayout();
             this.ResultingOperator_GB.ResumeLayout(false);
             this.ResultingOperator_GB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultingOperatorTwo_NUD)).EndInit();
             this.LessOperator_GB.ResumeLayout(false);
             this.LessOperator_GB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ResultingOperatorTwo_NUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,8 +423,6 @@
         private System.Windows.Forms.GroupBox ResultingOperator_GB;
         private System.Windows.Forms.Label ResultingOperatorTwo_L;
         private System.Windows.Forms.Button ResultingOperator_B;
-        private System.Windows.Forms.TextBox ResultingOperatorOne_TB;
-        private System.Windows.Forms.Label ResultingOperatorOne_L;
         private System.Windows.Forms.GroupBox LessOperator_GB;
         private System.Windows.Forms.TextBox LessOperatorTwo_TB;
         private System.Windows.Forms.Label LessOperatorTwo_L;

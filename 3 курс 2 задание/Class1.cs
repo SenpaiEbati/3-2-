@@ -60,12 +60,14 @@ namespace _3_курс_2_задание
 
         public static Element operator *(Element Repetition, int Quantity)
         {
+            string a = "";
+            string b = "";
             for (int i = 0; i < Quantity; i++)
             {
-                Repetition._First += Repetition._First;
-                Repetition._Second += Repetition._Second;
+                a += Repetition._First + Repetition._First;
+                b += Repetition._Second + Repetition._Second;
             }
-            return new Element(Repetition._First,Repetition._Second);
+            return new Element(a,b);
         }
 
         public static bool operator ==(Element Left, Element Right)
@@ -80,26 +82,24 @@ namespace _3_курс_2_задание
 
         public static bool operator <(Element Left, Element Right)
         {   
-            if (Left._First.Length < Right._First.Length)
+            if ((Left._First.Length < Right._First.Length) && (Left._Second.Length < Right._Second.Length))
                 return true;
-            else if (Left._First.Length == Right._First.Length)
-                if (Left._Second.Length < Right._Second.Length)
-                    return true;
-                else
-                    return false;
+            else if ((Left._First.Length == Right._First.Length) && (Left._Second.Length < Right._Second.Length))
+                return true;
+            else if (Left._First.Length < Right._First.Length)
+                return true;
             else
                 return false;
         }
 
         public static bool operator >(Element Left, Element Right)
         {
-            if (Left._First.Length > Right._First.Length)
+            if ((Left._First.Length > Right._First.Length) && (Left._Second.Length > Right._Second.Length))
                 return true;
-            else if (Left._First.Length == Right._First.Length)
-                if (Left._Second.Length > Right._Second.Length)
-                    return true;
-                else
-                    return false;
+            else if ((Left._First.Length == Right._First.Length) && (Left._Second.Length > Right._Second.Length))
+                return true;
+            else if (Left._First.Length > Right._First.Length)
+                return true;
             else
                 return false;
         }
