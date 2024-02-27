@@ -73,7 +73,7 @@
             this.ListBox_LB.Location = new System.Drawing.Point(12, 25);
             this.ListBox_LB.Name = "ListBox_LB";
             this.ListBox_LB.Size = new System.Drawing.Size(222, 355);
-            this.ListBox_LB.TabIndex = 0;
+            this.ListBox_LB.TabIndex = 1;
             // 
             // ListBox_L
             // 
@@ -81,7 +81,7 @@
             this.ListBox_L.Location = new System.Drawing.Point(12, 9);
             this.ListBox_L.Name = "ListBox_L";
             this.ListBox_L.Size = new System.Drawing.Size(95, 13);
-            this.ListBox_L.TabIndex = 1;
+            this.ListBox_L.TabIndex = 0;
             this.ListBox_L.Text = "Список &объектов";
             // 
             // FieldOne_TB
@@ -89,7 +89,7 @@
             this.FieldOne_TB.Location = new System.Drawing.Point(352, 25);
             this.FieldOne_TB.Name = "FieldOne_TB";
             this.FieldOne_TB.Size = new System.Drawing.Size(100, 20);
-            this.FieldOne_TB.TabIndex = 2;
+            this.FieldOne_TB.TabIndex = 3;
             // 
             // FieldOne_L
             // 
@@ -97,7 +97,7 @@
             this.FieldOne_L.Location = new System.Drawing.Point(250, 28);
             this.FieldOne_L.Name = "FieldOne_L";
             this.FieldOne_L.Size = new System.Drawing.Size(72, 13);
-            this.FieldOne_L.TabIndex = 3;
+            this.FieldOne_L.TabIndex = 2;
             this.FieldOne_L.Text = "&Первое поле";
             // 
             // FieldTwo_L
@@ -106,7 +106,7 @@
             this.FieldTwo_L.Location = new System.Drawing.Point(250, 58);
             this.FieldTwo_L.Name = "FieldTwo_L";
             this.FieldTwo_L.Size = new System.Drawing.Size(70, 13);
-            this.FieldTwo_L.TabIndex = 5;
+            this.FieldTwo_L.TabIndex = 4;
             this.FieldTwo_L.Text = "&Второе поле";
             // 
             // FieldTwo_TB
@@ -114,7 +114,7 @@
             this.FieldTwo_TB.Location = new System.Drawing.Point(352, 51);
             this.FieldTwo_TB.Name = "FieldTwo_TB";
             this.FieldTwo_TB.Size = new System.Drawing.Size(100, 20);
-            this.FieldTwo_TB.TabIndex = 4;
+            this.FieldTwo_TB.TabIndex = 5;
             // 
             // SubtracOperator_GB
             // 
@@ -126,7 +126,7 @@
             this.SubtracOperator_GB.Location = new System.Drawing.Point(240, 87);
             this.SubtracOperator_GB.Name = "SubtracOperator_GB";
             this.SubtracOperator_GB.Size = new System.Drawing.Size(302, 84);
-            this.SubtracOperator_GB.TabIndex = 6;
+            this.SubtracOperator_GB.TabIndex = 7;
             this.SubtracOperator_GB.TabStop = false;
             this.SubtracOperator_GB.Text = "Оператор - (<T>,<T>)";
             // 
@@ -135,7 +135,7 @@
             this.SubtracOperatorTwo_TB.Location = new System.Drawing.Point(112, 49);
             this.SubtracOperatorTwo_TB.Name = "SubtracOperatorTwo_TB";
             this.SubtracOperatorTwo_TB.Size = new System.Drawing.Size(100, 20);
-            this.SubtracOperatorTwo_TB.TabIndex = 9;
+            this.SubtracOperatorTwo_TB.TabIndex = 3;
             // 
             // SubtracOperatorTwo_L
             // 
@@ -143,7 +143,7 @@
             this.SubtracOperatorTwo_L.Location = new System.Drawing.Point(10, 52);
             this.SubtracOperatorTwo_L.Name = "SubtracOperatorTwo_L";
             this.SubtracOperatorTwo_L.Size = new System.Drawing.Size(81, 13);
-            this.SubtracOperatorTwo_L.TabIndex = 10;
+            this.SubtracOperatorTwo_L.TabIndex = 2;
             this.SubtracOperatorTwo_L.Text = "В&торая строка";
             // 
             // SubtracOperator_B
@@ -151,7 +151,7 @@
             this.SubtracOperator_B.Location = new System.Drawing.Point(218, 21);
             this.SubtracOperator_B.Name = "SubtracOperator_B";
             this.SubtracOperator_B.Size = new System.Drawing.Size(75, 23);
-            this.SubtracOperator_B.TabIndex = 8;
+            this.SubtracOperator_B.TabIndex = 4;
             this.SubtracOperator_B.Text = "&Выполнить";
             this.SubtracOperator_B.UseVisualStyleBackColor = true;
             this.SubtracOperator_B.Click += new System.EventHandler(this.SubtracOperator_B_Click);
@@ -161,7 +161,7 @@
             this.SubtracOperatorOne_TB.Location = new System.Drawing.Point(112, 23);
             this.SubtracOperatorOne_TB.Name = "SubtracOperatorOne_TB";
             this.SubtracOperatorOne_TB.Size = new System.Drawing.Size(100, 20);
-            this.SubtracOperatorOne_TB.TabIndex = 8;
+            this.SubtracOperatorOne_TB.TabIndex = 1;
             // 
             // SubtracOperatorOne_L
             // 
@@ -169,7 +169,7 @@
             this.SubtracOperatorOne_L.Location = new System.Drawing.Point(10, 26);
             this.SubtracOperatorOne_L.Name = "SubtracOperatorOne_L";
             this.SubtracOperatorOne_L.Size = new System.Drawing.Size(83, 13);
-            this.SubtracOperatorOne_L.TabIndex = 8;
+            this.SubtracOperatorOne_L.TabIndex = 0;
             this.SubtracOperatorOne_L.Text = "П&ервая строка";
             // 
             // AddField_B
@@ -177,7 +177,7 @@
             this.AddField_B.Location = new System.Drawing.Point(458, 23);
             this.AddField_B.Name = "AddField_B";
             this.AddField_B.Size = new System.Drawing.Size(75, 23);
-            this.AddField_B.TabIndex = 7;
+            this.AddField_B.TabIndex = 6;
             this.AddField_B.Text = "&Добавить";
             this.AddField_B.UseVisualStyleBackColor = true;
             this.AddField_B.Click += new System.EventHandler(this.AddField_B_Click);
@@ -192,7 +192,7 @@
             this.EqualsOperator_GB.Location = new System.Drawing.Point(240, 241);
             this.EqualsOperator_GB.Name = "EqualsOperator_GB";
             this.EqualsOperator_GB.Size = new System.Drawing.Size(302, 84);
-            this.EqualsOperator_GB.TabIndex = 11;
+            this.EqualsOperator_GB.TabIndex = 9;
             this.EqualsOperator_GB.TabStop = false;
             this.EqualsOperator_GB.Text = "Оператор == (<T>, <T>)";
             // 
@@ -201,7 +201,7 @@
             this.EqualsOperatorTwo_TB.Location = new System.Drawing.Point(112, 49);
             this.EqualsOperatorTwo_TB.Name = "EqualsOperatorTwo_TB";
             this.EqualsOperatorTwo_TB.Size = new System.Drawing.Size(100, 20);
-            this.EqualsOperatorTwo_TB.TabIndex = 9;
+            this.EqualsOperatorTwo_TB.TabIndex = 3;
             // 
             // EqualsOperatorTwo_L
             // 
@@ -209,7 +209,7 @@
             this.EqualsOperatorTwo_L.Location = new System.Drawing.Point(10, 52);
             this.EqualsOperatorTwo_L.Name = "EqualsOperatorTwo_L";
             this.EqualsOperatorTwo_L.Size = new System.Drawing.Size(86, 13);
-            this.EqualsOperatorTwo_L.TabIndex = 10;
+            this.EqualsOperatorTwo_L.TabIndex = 2;
             this.EqualsOperatorTwo_L.Text = "Вт&орая строчка";
             // 
             // EqualsOperator_B
@@ -217,7 +217,7 @@
             this.EqualsOperator_B.Location = new System.Drawing.Point(218, 21);
             this.EqualsOperator_B.Name = "EqualsOperator_B";
             this.EqualsOperator_B.Size = new System.Drawing.Size(75, 23);
-            this.EqualsOperator_B.TabIndex = 8;
+            this.EqualsOperator_B.TabIndex = 4;
             this.EqualsOperator_B.Text = "Вы&полнить";
             this.EqualsOperator_B.UseVisualStyleBackColor = true;
             this.EqualsOperator_B.Click += new System.EventHandler(this.EqualsOperator_B_Click);
@@ -227,7 +227,7 @@
             this.EqualsOperatorOne_TB.Location = new System.Drawing.Point(112, 23);
             this.EqualsOperatorOne_TB.Name = "EqualsOperatorOne_TB";
             this.EqualsOperatorOne_TB.Size = new System.Drawing.Size(100, 20);
-            this.EqualsOperatorOne_TB.TabIndex = 8;
+            this.EqualsOperatorOne_TB.TabIndex = 1;
             // 
             // EqualsOperatorOne_L
             // 
@@ -235,7 +235,7 @@
             this.EqualsOperatorOne_L.Location = new System.Drawing.Point(10, 26);
             this.EqualsOperatorOne_L.Name = "EqualsOperatorOne_L";
             this.EqualsOperatorOne_L.Size = new System.Drawing.Size(88, 13);
-            this.EqualsOperatorOne_L.TabIndex = 8;
+            this.EqualsOperatorOne_L.TabIndex = 0;
             this.EqualsOperatorOne_L.Text = "Пе&рвая строчка";
             // 
             // ResultingOperator_GB
@@ -246,7 +246,7 @@
             this.ResultingOperator_GB.Location = new System.Drawing.Point(240, 177);
             this.ResultingOperator_GB.Name = "ResultingOperator_GB";
             this.ResultingOperator_GB.Size = new System.Drawing.Size(302, 58);
-            this.ResultingOperator_GB.TabIndex = 11;
+            this.ResultingOperator_GB.TabIndex = 8;
             this.ResultingOperator_GB.TabStop = false;
             this.ResultingOperator_GB.Text = "Оператор * (<T>, int)";
             // 
@@ -260,7 +260,7 @@
             0});
             this.ResultingOperatorTwo_NUD.Name = "ResultingOperatorTwo_NUD";
             this.ResultingOperatorTwo_NUD.Size = new System.Drawing.Size(100, 20);
-            this.ResultingOperatorTwo_NUD.TabIndex = 11;
+            this.ResultingOperatorTwo_NUD.TabIndex = 1;
             // 
             // ResultingOperatorTwo_L
             // 
@@ -268,7 +268,7 @@
             this.ResultingOperatorTwo_L.Location = new System.Drawing.Point(10, 26);
             this.ResultingOperatorTwo_L.Name = "ResultingOperatorTwo_L";
             this.ResultingOperatorTwo_L.Size = new System.Drawing.Size(91, 13);
-            this.ResultingOperatorTwo_L.TabIndex = 10;
+            this.ResultingOperatorTwo_L.TabIndex = 0;
             this.ResultingOperatorTwo_L.Text = "&Кол. повторений";
             // 
             // ResultingOperator_B
@@ -276,7 +276,7 @@
             this.ResultingOperator_B.Location = new System.Drawing.Point(218, 21);
             this.ResultingOperator_B.Name = "ResultingOperator_B";
             this.ResultingOperator_B.Size = new System.Drawing.Size(75, 23);
-            this.ResultingOperator_B.TabIndex = 8;
+            this.ResultingOperator_B.TabIndex = 2;
             this.ResultingOperator_B.Text = "В&ыполнить";
             this.ResultingOperator_B.UseVisualStyleBackColor = true;
             this.ResultingOperator_B.Click += new System.EventHandler(this.ResultingOperator_B_Click);
@@ -291,7 +291,7 @@
             this.LessOperator_GB.Location = new System.Drawing.Point(240, 331);
             this.LessOperator_GB.Name = "LessOperator_GB";
             this.LessOperator_GB.Size = new System.Drawing.Size(302, 84);
-            this.LessOperator_GB.TabIndex = 12;
+            this.LessOperator_GB.TabIndex = 10;
             this.LessOperator_GB.TabStop = false;
             this.LessOperator_GB.Text = "Оператор < (<T>, <T>)";
             // 
@@ -300,7 +300,7 @@
             this.LessOperatorTwo_TB.Location = new System.Drawing.Point(112, 49);
             this.LessOperatorTwo_TB.Name = "LessOperatorTwo_TB";
             this.LessOperatorTwo_TB.Size = new System.Drawing.Size(100, 20);
-            this.LessOperatorTwo_TB.TabIndex = 9;
+            this.LessOperatorTwo_TB.TabIndex = 3;
             // 
             // LessOperatorTwo_L
             // 
@@ -308,7 +308,7 @@
             this.LessOperatorTwo_L.Location = new System.Drawing.Point(10, 52);
             this.LessOperatorTwo_L.Name = "LessOperatorTwo_L";
             this.LessOperatorTwo_L.Size = new System.Drawing.Size(86, 13);
-            this.LessOperatorTwo_L.TabIndex = 10;
+            this.LessOperatorTwo_L.TabIndex = 2;
             this.LessOperatorTwo_L.Text = "Вторая с&трочка";
             // 
             // LessOperator_B
@@ -316,7 +316,7 @@
             this.LessOperator_B.Location = new System.Drawing.Point(218, 21);
             this.LessOperator_B.Name = "LessOperator_B";
             this.LessOperator_B.Size = new System.Drawing.Size(75, 23);
-            this.LessOperator_B.TabIndex = 8;
+            this.LessOperator_B.TabIndex = 4;
             this.LessOperator_B.Text = "Выпо&лнить";
             this.LessOperator_B.UseVisualStyleBackColor = true;
             this.LessOperator_B.Click += new System.EventHandler(this.LessOperator_B_Click);
@@ -326,7 +326,7 @@
             this.LessOperatorOne_TB.Location = new System.Drawing.Point(112, 23);
             this.LessOperatorOne_TB.Name = "LessOperatorOne_TB";
             this.LessOperatorOne_TB.Size = new System.Drawing.Size(100, 20);
-            this.LessOperatorOne_TB.TabIndex = 8;
+            this.LessOperatorOne_TB.TabIndex = 1;
             // 
             // LessOperatorOne_L
             // 
@@ -334,7 +334,7 @@
             this.LessOperatorOne_L.Location = new System.Drawing.Point(10, 26);
             this.LessOperatorOne_L.Name = "LessOperatorOne_L";
             this.LessOperatorOne_L.Size = new System.Drawing.Size(88, 13);
-            this.LessOperatorOne_L.TabIndex = 8;
+            this.LessOperatorOne_L.TabIndex = 0;
             this.LessOperatorOne_L.Text = "Первая &строчка";
             // 
             // Result_TB
@@ -351,7 +351,7 @@
             this.Result_L.Location = new System.Drawing.Point(12, 438);
             this.Result_L.Name = "Result_L";
             this.Result_L.Size = new System.Drawing.Size(59, 13);
-            this.Result_L.TabIndex = 14;
+            this.Result_L.TabIndex = 12;
             this.Result_L.Text = "&Результат";
             // 
             // Del_B
@@ -359,7 +359,7 @@
             this.Del_B.Location = new System.Drawing.Point(12, 392);
             this.Del_B.Name = "Del_B";
             this.Del_B.Size = new System.Drawing.Size(222, 23);
-            this.Del_B.TabIndex = 15;
+            this.Del_B.TabIndex = 11;
             this.Del_B.Text = "&Удалить";
             this.Del_B.UseVisualStyleBackColor = true;
             this.Del_B.Click += new System.EventHandler(this.Del_B_Click);

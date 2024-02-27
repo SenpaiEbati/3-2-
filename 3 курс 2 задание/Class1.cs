@@ -10,15 +10,15 @@ namespace _3_курс_2_задание
     {
         private string _First, _Second;
 
-        public string First { get { return _First; } set { if (value != null) _First = value; } }
-        public string Second { get { return _Second; } set { if (value != null) _Second = value; } }
+        public string First { get { return _First; } set { if (value == null || value == "" || value == " ") _First = "ж"; else _First = value; } }
+        public string Second { get { return _Second; } set { if (value == null || value == "" || value == " ") _Second = "з"; else _Second = value; } }
 
         public Element() : this("ж","з") { }
 
         public Element(string nFirst, string nSecond) 
         {
-            _First = nFirst != null ? nFirst : "ж";
-            _Second = nSecond != null ? nSecond : "з";
+            _First = nFirst == null || nFirst == "" || nFirst == " " ? "ж" : nFirst;
+            _Second = nSecond == null || nSecond == "" || nSecond == " " ? "з" : nSecond;
         }
 
         public override string ToString()
@@ -28,46 +28,62 @@ namespace _3_курс_2_задание
 
         public override bool Equals(object obj)
         {
-            return obj is Element element &&
-                   _First == element._First &&
-                   _Second == element._Second &&
-                   First == element.First &&
-                   Second == element.Second;
+            if (obj != null && GetType() == obj.GetType())
+                return this == (obj as Element);
+            else
+                return false;
         }
 
         public override int GetHashCode()
         {
-            int hashCode = 777291660;
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_First);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_Second);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(First);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Second);
-            return hashCode;
+            return _First.GetHashCode() ^ _Second.GetHashCode();
         }
 
         public static Element operator -(Element Left, Element Right)
         {
+            //if ((Right._First.Length >= Left._First.Length) && (Right._Second.Length >= Left._Second.Length))
+            //    return new Element("ж", "з");
+            //else if (!(Right._First.Length >= Left._First.Length) && (Right._Second.Length >= Left._Second.Length))
+            //    return new Element(Left._First.Remove(Left._First.Length - Right._First.Length, Right._First.Length), "з");
+            //else if ((Right._First.Length >= Left._First.Length) && !(Right._Second.Length >= Left._Second.Length))
+            //    return new Element("ж", Left._Second.Remove(Left._Second.Length - Right._Second.Length, Right._Second.Length));
+            //else
+            //    return new Element(Left._First.Remove(Left._First.Length - Right._First.Length, Right._First.Length), 
+            //                       Left._Second.Remove(Left._Second.Length - Right._Second.Length, Right._Second.Length));
+
             if ((Right._First.Length >= Left._First.Length) && (Right._Second.Length >= Left._Second.Length))
                 return new Element("ж", "з");
-            else if (!(Right._First.Length >= Left._First.Length) && (Right._Second.Length >= Left._Second.Length))
-                return new Element(Left._First.Remove(Left._First.Length - Right._First.Length, Right._First.Length), "з");
-            else if ((Right._First.Length >= Left._First.Length) && !(Right._Second.Length >= Left._Second.Length))
-                return new Element("ж", Left._Second.Remove(Left._Second.Length - Right._Second.Length, Right._Second.Length));
+
+            string a,b;
+            if (Right._First.Length < Left._First.Length)
+                a = Left._First.Remove(Left._First.Length - Right._First.Length, Right._First.Length);
             else
-                return new Element(Left._First.Remove(Left._First.Length - Right._First.Length, Right._First.Length), 
-                                   Left._Second.Remove(Left._Second.Length - Right._Second.Length, Right._Second.Length));
+                a = "ж";
+
+            if (Right._Second.Length < Left._Second.Length)
+                b = Left._Second.Remove(Left._Second.Length - Right._Second.Length, Right._Second.Length);
+            else
+                b = "з";
+
+            return new Element(a,b);
         }
 
         public static Element operator *(Element Repetition, int Quantity)
         {
             string a = "";
             string b = "";
-            for (int i = 0; i < Quantity; i++)
+            if (Quantity > 0)
             {
-                a += Repetition._First + Repetition._First;
-                b += Repetition._Second + Repetition._Second;
+                for (int i = 0; i < Quantity; i++)
+                {
+                    a += Repetition._First;
+                    b += Repetition._Second;
+                }
+                return new Element(a, b);
             }
-            return new Element(a,b);
+            else
+                return new Element("ж", "з");
+            
         }
 
         public static bool operator ==(Element Left, Element Right)
