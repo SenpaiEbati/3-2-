@@ -10,15 +10,37 @@ namespace _3_курс_2_задание
     {
         private string _First, _Second;
 
-        public string First { get { return _First; } set { if (value == null || value == "" || value == " ") _First = "ж"; else _First = value; } }
-        public string Second { get { return _Second; } set { if (value == null || value == "" || value == " ") _Second = "з"; else _Second = value; } }
+        public string First 
+        { 
+            get 
+            { 
+                return _First; 
+            } 
+            set 
+            { 
+                if ( !string.IsNullOrWhiteSpace(value) )
+                    _First = value; 
+            } 
+        }
+        public string Second 
+        { 
+            get 
+            { 
+                return _Second; 
+            }
+            set 
+            { 
+                if ( !string.IsNullOrWhiteSpace(value) )
+                    _Second = value; 
+            } 
+        }
 
         public Element() : this("ж","з") { }
 
         public Element(string nFirst, string nSecond) 
         {
-            _First = nFirst == null || nFirst == "" || nFirst == " " ? "ж" : nFirst;
-            _Second = nSecond == null || nSecond == "" || nSecond == " " ? "з" : nSecond;
+            _First = string.IsNullOrWhiteSpace(nFirst) ? "ж" : nFirst;
+            _Second = string.IsNullOrWhiteSpace(nSecond) ? "з" : nSecond;
         }
 
         public override string ToString()
@@ -41,16 +63,6 @@ namespace _3_курс_2_задание
 
         public static Element operator -(Element Left, Element Right)
         {
-            //if ((Right._First.Length >= Left._First.Length) && (Right._Second.Length >= Left._Second.Length))
-            //    return new Element("ж", "з");
-            //else if (!(Right._First.Length >= Left._First.Length) && (Right._Second.Length >= Left._Second.Length))
-            //    return new Element(Left._First.Remove(Left._First.Length - Right._First.Length, Right._First.Length), "з");
-            //else if ((Right._First.Length >= Left._First.Length) && !(Right._Second.Length >= Left._Second.Length))
-            //    return new Element("ж", Left._Second.Remove(Left._Second.Length - Right._Second.Length, Right._Second.Length));
-            //else
-            //    return new Element(Left._First.Remove(Left._First.Length - Right._First.Length, Right._First.Length), 
-            //                       Left._Second.Remove(Left._Second.Length - Right._Second.Length, Right._Second.Length));
-
             if ((Right._First.Length >= Left._First.Length) && (Right._Second.Length >= Left._Second.Length))
                 return new Element("ж", "з");
 
@@ -97,27 +109,25 @@ namespace _3_курс_2_задание
         }
 
         public static bool operator <(Element Left, Element Right)
-        {   
-            if ((Left._First.Length < Right._First.Length) && (Left._Second.Length < Right._Second.Length))
+        {
+            if ((Left._First.Length == Right._First.Length) && (Left._Second.Length < Right._Second.Length))
                 return true;
-            else if ((Left._First.Length == Right._First.Length) && (Left._Second.Length < Right._Second.Length))
+
+            if (Left._First.Length < Right._First.Length)
                 return true;
-            else if (Left._First.Length < Right._First.Length)
-                return true;
-            else
-                return false;
+
+            return false;
         }
 
         public static bool operator >(Element Left, Element Right)
         {
-            if ((Left._First.Length > Right._First.Length) && (Left._Second.Length > Right._Second.Length))
+            if ((Left._First.Length == Right._First.Length) && (Left._Second.Length > Right._Second.Length))
                 return true;
-            else if ((Left._First.Length == Right._First.Length) && (Left._Second.Length > Right._Second.Length))
+
+            if (Left._First.Length > Right._First.Length)
                 return true;
-            else if (Left._First.Length > Right._First.Length)
-                return true;
-            else
-                return false;
+
+            return false;
         }
     }
 }
