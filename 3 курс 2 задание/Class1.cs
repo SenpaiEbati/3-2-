@@ -63,8 +63,6 @@ namespace _3_курс_2_задание
 
         public static Element operator -(Element Left, Element Right)
         {
-            if ((Right._First.Length >= Left._First.Length) && (Right._Second.Length >= Left._Second.Length))
-                return new Element("ж", "з");
 
             string a,b;
             if (Right._First.Length < Left._First.Length)
